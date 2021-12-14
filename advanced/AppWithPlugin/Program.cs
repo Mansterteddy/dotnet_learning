@@ -64,7 +64,9 @@ namespace AppWithPlugin
 
                 string[] pluginPaths = new string[]
                 {
-                     @"HelloPlugin\bin\Release\net5.0\HelloPlugin.dll"
+                     @"HelloPlugin\bin\Release\net5.0\HelloPlugin.dll",
+                     @"JsonPlugin\bin\Release\net5.0\JsonPlugin.dll",
+                     @"OldJsonPlugin\bin\Release\net5.0\OldJsonPlugin.dll"
                 };
 
                 IEnumerable<ICommand> commands = pluginPaths.SelectMany(pluginPath =>
@@ -80,6 +82,7 @@ namespace AppWithPlugin
                     foreach (ICommand command in commands)
                     {
                         Console.WriteLine($"{command.Name}\t - {command.Description}");
+                        int res = command.Execute();
                     }
                 }
                 else
