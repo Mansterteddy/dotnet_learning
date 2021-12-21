@@ -12,9 +12,10 @@ namespace trt
             
             RankLMV7InferCsAPI.Init("./trt7/post_trt_v7.ini");
 
+            /*
             RankLMV8InferCsAPI v8_infer = new RankLMV8InferCsAPI();
             v8_infer.Init("./trt8/post_trt.engine");
-            v8_infer.Dispose();
+            v8_infer.Dispose();*/
         }
     }
 }
